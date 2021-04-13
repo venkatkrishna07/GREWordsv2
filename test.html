@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>GRE Words</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
+	<link href="'https://fonts.googleapis.com/css?family=Raleway:300,400'" rel="stylesheet">
+    </head>
+    <script>
+        function testfunc(){
+            var maincontainer = document.getElementById("txt1").value;
+            fetch('https://api.dictionaryapi.dev/api/v2/entries/en_US/'+maincontainer).then((response) => {
+                console.log('Received Response',response);
+			    return response.json();
+            }).then(data =>{
+			
+            //console.log(data);
+            try{ for(var i=0;i<data.length;i++){
+		   finalres = data[i].meanings[0].definitions[0].definition
+		   console.log(finalres)
+
+		  document.getElementById("txt2").innerHTML = finalres;
+		   
+		}
+	}catch(error){
+			//document.getElementById("learntwords").innerHTML = "You have not learnt any words";
+		   
+	}
+               
+            }).catch((err) => {
+                console.log("error",err);
+                //document.getElementById("learntwords").innerHTML = "Error! , unable to connect to GRE Word Database"
+            });
+            }
+    </script>
+    <body>
+
+        <button type="button" onclick="testfunc()">Click Me!</button>
+        <textarea id="txt1" ></textarea>
+        <textarea id="txt2" ></textarea>
+    </body>
+</html>
