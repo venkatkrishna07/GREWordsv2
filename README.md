@@ -12,6 +12,10 @@ Mysql
 
 `$ go get -u github.com/go-sql-driver/mysql`
 
+Import it in your code:
+
+`import "github.com/gin-gonic/gin"`
+
 2.To install Gin package, you need to install Go and set your Go workspace first.
 
 The first need Go installed (version 1.13+ is required), then you can use the below Go command to install Gin.
@@ -20,7 +24,7 @@ The first need Go installed (version 1.13+ is required), then you can use the be
 
 Import it in your code:
 
-`import "github.com/gin-gonic/gin"`
+`"github.com/go-sql-driver/mysql"`
 
 (Optional) Import net/http. This is required for example if using constants such as http.StatusOK.
 
