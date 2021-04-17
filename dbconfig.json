@@ -1,0 +1,34 @@
+[
+	{
+		"Field" : "word",
+		"Type" : "varchar(30)",
+		"Null" : "YES",
+		"Key" : "",
+		"Default" : null,
+		"Extra" : ""
+	},
+	{
+		"Field" : "meaning",
+		"Type" : "longtext",
+		"Null" : "YES",
+		"Key" : "",
+		"Default" : null,
+		"Extra" : ""
+	},
+	{
+		"Field" : "learnt",
+		"Type" : "tinyint(1)",
+		"Null" : "YES",
+		"Key" : "",
+		"Default" : null,
+		"Extra" : ""
+	},
+	{
+		"Field" : "learntAt",
+		"Type" : "timestamp",
+		"Null" : "YES",
+		"Key" : "",
+		"Default" : null,
+		"Extra" : ""
+	}
+]
