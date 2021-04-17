@@ -18,7 +18,7 @@ Import it in your code:
 
 2.To install Gin package, you need to install Go and set your Go workspace first.
 
-The first need Go installed (version 1.13+ is required), then you can use the below Go command to install Gin.
+After installing Go (version 1.13+ is required), then you can use the below Go command to install Gin.
 
 `$ go get -u github.com/gin-gonic/gin`
 
