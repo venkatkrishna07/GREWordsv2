@@ -190,4 +190,15 @@ func AddWord(c *gin.Context) {
 		panic(err)
 	}
 
+	_, err2 := models.DB.Query("update Words set learntAt = Now() where word = ?", Aword.Word)
+	if err2 != nil {
+		panic(err2)
+	}
+
+	//fmt.Println(w1.Word, w1.Meaning)
+	_, err1 := models.DB.Exec("UPDATE Words set learnt = 1 where word = ?", Aword.Word)
+	if err1 != nil {
+		panic(err1)
+	}
+
 }
