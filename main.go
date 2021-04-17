@@ -16,6 +16,7 @@ func main() {
 	r.GET("/check/:word", controllers.CheckWord)
 	r.GET("/getW/:word", controllers.GetMeaning)
 	r.GET("/check", controllers.Testfunc)
+	r.POST("/addWord", controllers.AddWord)
 
 	r.Run()
 }
