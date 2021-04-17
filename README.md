@@ -1,6 +1,4 @@
-# Bookstore REST API using Gin and Gorm
-
-Read the [article](https://blog.logrocket.com/how-to-build-a-rest-api-with-golang-using-gin-and-gorm/).
+API to fetch new word and the meaning from GRE Words pool
 
 How to use:
 
