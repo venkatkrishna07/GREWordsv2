@@ -18,7 +18,7 @@
 
 </head>
 <script>
-	
+
 	function fetchapi(){
 		var maincontainer = document.getElementById("wordarea");
 		fetch('http://localhost:8080/word').then((response) =>{
@@ -59,13 +59,14 @@
 		   
 		}).catch((err) => {
 			console.log("error",err);
-			document.getElementById("wordarea").innerHTML = "Error! , unable to connect to GRE Word Database"
+			document.getElementById("learntwords").innerHTML = "Error! , unable to connect to GRE Word Database"
 		});
 	}
 	function appendData1(data){
-	   var divid = document.getElementById("wordarea")
+	   var divid = document.getElementById("learntwords")
 	   divid.innerHTML=' '
-
+	   var woardarea1 = document.getElementById("wordarea")
+	   woardarea1.innerHTML=' '
 	   try{ for(var i=0;i<data.length;i++){
 		   finalres = data[i].word + ' ' +data[i].meaning;
 		   console.log(finalres)
@@ -73,7 +74,7 @@
 		   
 		}
 	}catch(error){
-			document.getElementById("learntwords").innerHTML = "You have not learnt any words!";
+			document.getElementById("learntwords").innerHTML = "You have not learnt any words";
 		   
 	}}
 
@@ -103,8 +104,12 @@
 															finalres = data[i].meanings[0].definitions[0].definition
 															
 															console.log(finalres)
-															searchres.innerHTML = "";
 															searchres.innerHTML=searchres.innerHTML+finalres;
+															var pword = maincontainer;
+															var pmeaning = finalres;
+															var postdata = {word : pword, meaning : finalres};
+															AddWordDB(postdata);
+
 															
 														}
 														}catch(error){
@@ -140,6 +145,25 @@
 
 			
 			}
+	}
+
+
+	function AddWordDB(postdata){
+		fetch('http://localhost:8080/addWord', {					mode: "no-cors",
+																	method: 'POST', 
+																	headers: {
+																		
+																		'Access-Control-Allow-Origin': '*',
+																		'Access-Control-Allow-Origin': 'http://127.0.0.1:5500',
+																		
+																		
+																	},
+																	body: JSON.stringify(postdata),
+																	}).catch((error) => {
+																		console.error('Error:', error);
+																		});
+
+
 	}
 </script>
 

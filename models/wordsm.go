@@ -22,3 +22,8 @@ type ShowWord struct {
 type SearchWord struct {
 	Word string `json:"word"`
 }
+
+type NewWord struct {
+	Word    string `json:"word" binding:"required"`
+	Meaning string `json:"meaning" binding:"required"`
+}
