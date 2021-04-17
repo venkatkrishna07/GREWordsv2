@@ -30,7 +30,7 @@ Import it in your code:
 
 `import "net/http"`
 
-
+**Check dbconfig file for database info**
 ```
 $ go run main.go
 ```
