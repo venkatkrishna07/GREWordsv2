@@ -31,6 +31,10 @@ Import it in your code:
 `import "net/http"`
 
 **Check dbconfig file for database info**
+
+**External API used for searching words and adding them to the database**
+
+https://github.com/meetDeveloper/freeDictionaryAPI
 ```
 $ go run main.go
 ```
