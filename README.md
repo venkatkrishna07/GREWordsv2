@@ -1,6 +1,6 @@
 API to fetch new word and the meaning from GRE Word pool
 
-How to use:
+
 
 **Requirements:**
 Go,
