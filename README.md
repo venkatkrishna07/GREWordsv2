@@ -1,7 +1,6 @@
 API to fetch new word and the meaning from GRE Word pool
 
 
-
 **Requirements:**
 Go,
 GIN,
@@ -11,7 +10,7 @@ Mysql
 
 1.MySql
 
-`$ go get -u github.com/go-sql-driver/mysql`
+`$ go get  github.com/go-sql-driver/mysql`
 
 Import it in your code:
 
@@ -21,7 +20,7 @@ Import it in your code:
 
 After installing Go (version 1.13+ is required), then you can use the below Go command to install Gin.
 
-`$ go get -u github.com/gin-gonic/gin`
+`$ go get  github.com/gin-gonic/gin`
 
 Import it in your code:
 
